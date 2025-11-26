@@ -665,7 +665,8 @@ p {
         background: #ffffff;
         border-radius: 18px;
         padding: 30px;
-        max-width: 900px;
+        max-width: 1250px;
+        
         margin: 40px auto;
         border: 2px solid #d5d5d5;
         box-shadow: 0 8px 25px rgba(0,0,0,0.08);
@@ -713,7 +714,7 @@ p {
         top: 20px;
     }
 
-    .info-list li span {
+   .info-list li span {
     display: block;
     width: 100%;
     font-weight: 700;
@@ -723,6 +724,9 @@ p {
     border-radius: 6px;
     margin-bottom: 12px;
 }
+
+
+
 
     @media(max-width: 600px) {
         .info-box {
