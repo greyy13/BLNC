@@ -660,6 +660,73 @@ p {
   right: -20px;
 }
 
+/* ===== info box ===== */
+  .info-box {
+        background: #ffffff;
+        border-radius: 18px;
+        padding: 30px;
+        max-width: 900px;
+        margin: 40px auto;
+        border: 2px solid #d5d5d5;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        font-family: "Poppins", sans-serif;
+    }
+
+    .info-title {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 25px;
+        font-weight: 700;
+        color: #333;
+        letter-spacing: 1px;
+         font-family: 'Merriweather', serif;
+    }
+
+    .info-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        counter-reset: num;
+
+    }
+
+    .info-list li {
+        background: #f7f9fc;
+        margin-bottom: 15px;
+        padding: 18px 20px;
+        border-radius: 12px;
+        border-left: 6px solid#d62828;
+        counter-increment: num;
+        position: relative;
+         font-family: 'Merriweather', serif;
+         font-size: 18px;
+         margin-left: 15px;
+    }
+
+    .info-list li::before {
+        content: counter(num) ".";
+        font-weight: 700;
+        font-size: 18px;
+        color: #d62828;
+        position: absolute;
+        left: -35px;
+        top: 20px;
+    }
+
+    .info-list li span {
+        font-weight: 600;
+        color: #222;
+    }
+
+    @media(max-width: 600px) {
+        .info-box {
+            padding: 20px;
+        }
+        .info-list li {
+            padding: 15px;
+        }
+    }
+z
 /* ===== Features CSS ===== */
 .ud-features {
   padding-top: 120px;
