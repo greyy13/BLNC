@@ -714,9 +714,15 @@ p {
     }
 
     .info-list li span {
-        font-weight: 600;
-        color: #222;
-    }
+    display: block;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 12px;
+    background: #e5e5e5; /* light grey highlight */
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
 
     @media(max-width: 600px) {
         .info-box {
