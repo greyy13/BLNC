@@ -394,7 +394,7 @@ of entrepreneurs in Lipa City — insights from an in-depth local study.
           </div>
 
           <div class="col-lg-8">
-            <section id="s1" class="ud-s1">
+            <section id="s1" class="ud-s1 fade-in">
             <div class="ud-blog-details-content">
               <h2 class="ud-blog-details-title">
                 What Drives Lipa Entrepreneurs?
@@ -1654,6 +1654,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   elements.forEach(el => observer.observe(el));
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1, // how much of the element should be visible
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // fade in once
+      }
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+</script>
+
 
   </body>
 </html>
