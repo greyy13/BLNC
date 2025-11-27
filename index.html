@@ -34,8 +34,6 @@
 <meta property="twitter:description" content="Play - Free Open Source HTML Bootstrap Template by UIdeck Team">
 <meta property="twitter:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
 <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
-	  <link rel="stylesheet" href="https://unpkg.com/normalize.css/normalize.css">
-
 
     <!--====== Favicon Icon ======-->
     <link
@@ -1195,7 +1193,6 @@ confidence, and connection.
           
     </section>
     <!-- ====== Team End ====== -->
-			<br>
      
 
     <!-- ====== Contact Start ====== -->
@@ -1593,5 +1590,25 @@ confidence, and connection.
   window.addEventListener('scroll', revealOnScroll);
   revealOnScroll(); // initial check
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll(".info-list li");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.classList.add("show");
+                }, index * 150); // delay per item
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    items.forEach(item => observer.observe(item));
+});
+</script>
+
   </body>
 </html>
