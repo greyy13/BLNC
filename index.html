@@ -313,9 +313,10 @@ of entrepreneurs in Lipa City — insights from an in-depth local study.
 
     <section id="about" class="ud-about">
       <div class="container">
+        
         <div class="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
           <div class="ud-about-content-wrapper">
-            <div class="ud-about-content">
+            <div class="ud-about-content slide-from-left">
               <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -337,6 +338,8 @@ of entrepreneurs in Lipa City — insights from an in-depth local study.
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+
+
 <br>
               <span class="tag">About Us</span>
               <h2>BLNC: BALANCE — Believe, Adapt, Learn, Assess, Navigate, Commit, and Excel in Entrepreneurship</h2>
@@ -361,6 +364,7 @@ of entrepreneurs in Lipa City — insights from an in-depth local study.
           </div>
         </div>
       </div>
+     
     </section>
     <!-- ====== About End ====== -->
 
@@ -1210,8 +1214,7 @@ confidence, and connection.
           
     </section>
     <!-- ====== Team End ====== -->
-
-			<br>
+     
 
     <!-- ====== Contact Start ====== -->
     <section id="contact" class="ud-contact">
@@ -1638,6 +1641,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+  const elements = document.querySelectorAll('.slide-from-left');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 
   </body>
 </html>
