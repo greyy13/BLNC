@@ -2074,7 +2074,6 @@ z
   margin-left: 30px;
 
 }
-
 .ud-blog-details-subtitle {
   font-size: 24px;
   font-weight: 700;
@@ -2085,9 +2084,10 @@ z
   text-align: left;
   position: relative;
   letter-spacing: 0.5px;
-  padding-left: 14px;sub
+  padding-left: 14px;
   transition: all 0.3s ease;
 }
+
 .ud-blog-details-subtitle::before {
   content: "";
   position: absolute;
