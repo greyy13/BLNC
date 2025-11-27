@@ -810,6 +810,19 @@ p {
   transform: translateX(0);
 }
 
+/* Initial state: hidden */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* optional: slide up effect */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Active state: visible */
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
 /* when visible */
