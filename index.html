@@ -1594,21 +1594,32 @@ confidence, and connection.
 document.addEventListener("DOMContentLoaded", function () {
     const items = document.querySelectorAll(".info-list li");
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach((entry, index) => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.classList.add("show");
-                }, index * 150); // delay per item
+
+                // Add animation with stagger
+                items.forEach((li, index) => {
+                    setTimeout(() => {
+                        li.classList.add("show");
+                    }, index * 150);
+                });
+
+            } else {
+
+                // Remove the show class so animation can replay
+                items.forEach(li => {
+                    li.classList.remove("show");
+                });
+
             }
         });
-    }, {
-        threshold: 0.2
-    });
+    }, { threshold: 0.2 });
 
-    items.forEach(item => observer.observe(item));
+    observer.observe(document.querySelector(".info-list"));
 });
 </script>
+
 
   </body>
 </html>
