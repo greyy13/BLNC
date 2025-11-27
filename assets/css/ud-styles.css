@@ -791,7 +791,19 @@ p {
             padding: 15px;
         }
     }
-z
+/* ====== SCROLL ANIMATION ====== */
+.info-list li {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+}
+
+/* when visible */
+.info-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* ===== Features CSS ===== */
 .ud-features {
   padding-top: 120px;
