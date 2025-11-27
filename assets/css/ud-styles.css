@@ -798,6 +798,20 @@ p {
     transition: all 0.6s ease;
 }
 
+/* Smooth slide-in from left animation */
+.slide-from-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-from-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
 /* when visible */
 .info-list li.show {
     opacity: 1;
